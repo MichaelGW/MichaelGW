@@ -15,6 +15,7 @@ public class PacMan2 extends Console {
     int yLocGost = 10;
     boolean n = true;
     
+    //
 
     public PacMan2() {
 
