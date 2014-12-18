@@ -18,7 +18,7 @@ public class PacMan2 extends Console {
     //
 
     public PacMan2() {
-
+      
     }
     
     
