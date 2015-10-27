@@ -3,7 +3,7 @@ import hsa.Console;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 
-public class PacMan2 extends Console {
+public class Powder extends Console {
 
     final int PACMAN_RADIUS = 40;
     final int STEP_SIZE = 10;
@@ -11,60 +11,23 @@ public class PacMan2 extends Console {
     final int LENGTH = 800;
     int xLocPac = 10;
     int yLocPac = 400;
-    int xfood = 400;
-    int yfood = 10;
-    int xdiff = Math.abs (xLocPac - xfood);
-    int ydiff = Math.abs (yLocPac - yfood);
+    int xLocGost = 400;
+    int yLocGost = 10;
     boolean n = true;
     
-    
-    
-    public PacMan2() {
+    //
+
+    public Powder() {
       
     }
-    
-   
     
     
     public static void main( String[] args ) {
         PacMan2 p = new PacMan2();
         p.drawPacmanUp();
         p.drawBackground();
-        p.food();
     }
 
-    public void food(){
-      
-        
-      setColour(Color.yellow);
-      while (true){
-          
-          
-          
-          xdiff = Math.abs (xLocPac - xfood);
-          ydiff = Math.abs (yLocPac - yfood);
-          
-          
-          
-          
-      if(xdiff == 0){
-        
-        xfood = (int) (Math.random() * 200) + 1;
-          
-      }else{
-        
-        setColor(Color.yellow);
-        fillArc(xfood, yfood, 10, 10, 110, 360);
-          
-          
-      }
-      
-      
-      }
-        
-    }
-   
-    
     public void keyPressed( KeyEvent e ) {
         int keyPressed = e.getKeyCode();
         switch ( keyPressed ) {
@@ -88,7 +51,13 @@ public class PacMan2 extends Console {
     public void drawBackground() {
         setColour(Color.black);
         fillRect(0, 0, LENGTH, HEIGHT);
-        
+        //setColour(Color.blue);
+        //fillOval(LENGTH/96*16, HEIGHT/64*17, LENGTH/80*16, HEIGHT/80*16);
+        //setColour(Color.black);
+        //fillOval(LENGTH/192*33, HEIGHT/64*16, LENGTH/80*15, HEIGHT/80*16);
+        //setColour(Color.blue);
+        //fillOval(LENGTH/48*9, HEIGHT/4, LENGTH/20, HEIGHT/20);
+        //fillOval(LENGTH/48*13, HEIGHT/4, LENGTH/20, HEIGHT/20);
     }
     public void drawPacmanUp() {
         if (n == true){ 
@@ -184,7 +153,7 @@ public class PacMan2 extends Console {
 
     public void erasePacman() {        
         setColor( Color.black );
-        fillArc( xLocPac - 10, yLocPac - 10, PACMAN_RADIUS + 20, PACMAN_RADIUS + 40, 0, 360 );      
+        fillArc( xLocPac - 10, yLocPac - 10, PACMAN_RADIUS + 20, PACMAN_RADIUS + 20, 0, 360 );      
     }
 
     

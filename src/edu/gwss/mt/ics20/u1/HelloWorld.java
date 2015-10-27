@@ -1,3 +1,4 @@
+
 package edu.gwss.mt.ics20.u1;
 
 import java.util.Calendar;
@@ -7,11 +8,13 @@ import java.util.Scanner;
 /**
  * @author michaeltaciuk Nov 5, 2014 Description: This is a Hello World Program!
  */
+
 public class HelloWorld {
 
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
